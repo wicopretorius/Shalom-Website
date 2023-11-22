@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-dark);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #ffffff !important;
+}
+
+.servicebody {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.servicecontainer {
+  display: flex;
+  width: 90vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 45vh;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3 {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  margin: 0;
+  writing-mode: vertical-lr;
+}
+
+.panel.active {
+  flex: 3;
+}
+
+.panel.active h3 {
+  -webkit-transition: all 2s ease-in;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  writing-mode: horizontal-tb;
+}
+
+@media (max-width: 480px) {
+  .servicecontainer {
+    width: 100vw;
+  }
+
+  .panel h3 {
+    left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .panel.active h3 {
+    padding-left: 10px;
+    writing-mode: vertical-lr;
+    background-color: rgb(255, 255, 255);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.carousel_body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  height: 61vh;
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel_image {
+  width: 400px;
+  object-fit: cover;
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel_panel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel_image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+  padding: 0px;
+  margin: 0px;
+}
+
+.buttons-container_carousel {
+  padding: 0px;
+  margin-top: 0px;
+  display: flex;
+  justify-content: space-between;
+} 
+
+.btn_carousel {
+  background-color: rgb(102, 51, 153);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 49.1%;
+  height: 35px;
+  font-size: 15px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.btn_carousel:hover {
+  opacity: 0.8;
+  color: rgba(255, 209, 54, 1);
+}
+
+.btn_carousel:focus {
+  outline: none;
+}
+
+@media (max-width: 480px) {
+  .carousel_panel {
+    width: 450px;
+    height: 500px;
+  }
+  .carousel_image-container {
+    width: 400px;
+    height: 350px;
+  }
+ 
+  .carousel_body {
+    height: 50vh;
+  }
+}
+
+/* The Send Modal (background) */
+.sendmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.sendmodal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.sendclose {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.sendclose:hover,
+.sendclose:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
